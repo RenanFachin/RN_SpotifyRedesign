@@ -17,13 +17,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 50
   },
   primary:{
-    color: "#DADADA",
+    color: THEME.COLORS.GRAY[450],
     fontSize: 25,
     lineHeight: 33,
     fontFamily: THEME.FONT_FAMILY.BOLD
   },
   secondary:{
-    color: "#797979",
+    color: THEME.COLORS.GRAY[700],
     fontSize: 17,
     lineHeight: 23,
     fontFamily: THEME.FONT_FAMILY.REGULAR,

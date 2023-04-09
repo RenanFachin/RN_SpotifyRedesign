@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
   },
   button: {
-    color: "#F6F6F6",
+    color: THEME.COLORS.GRAY[300],
     fontFamily: THEME.FONT_FAMILY.BOLD,
     fontSize: 22,
     lineHeight: 30,

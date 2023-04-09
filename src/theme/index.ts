@@ -16,7 +16,8 @@ export const THEME = {
 
     WHITE: "#FFFFFF",
     GREEN_BUTTON: "#42C83C",
-    GREEN_TEXT: "#38B432"
+    GREEN_TEXT: "#38B432",
+    BUTTON_CUSTOM: "rgba(255, 255, 255, 0.03)"
   },
 
   FONT_FAMILY: {

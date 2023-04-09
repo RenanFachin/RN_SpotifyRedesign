@@ -1,15 +1,17 @@
 import { StyleSheet } from 'react-native';
+import { THEME } from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0D0C0C",
+    backgroundColor: THEME.COLORS.BACKGROUND_900,
     alignItems: "center",
   },
   bgImage: {
     position: 'absolute'
   },
   content: {
+    width: '100%',
     marginTop: 400,
     alignItems: "center",
     paddingHorizontal: 50
@@ -18,13 +20,13 @@ export const styles = StyleSheet.create({
     color: "#DADADA",
     fontSize: 25,
     lineHeight: 33,
-    fontWeight: '700'
+    fontFamily: THEME.FONT_FAMILY.BOLD
   },
   secondary:{
     color: "#797979",
     fontSize: 17,
     lineHeight: 23,
-    fontWeight: '400',
+    fontFamily: THEME.FONT_FAMILY.REGULAR,
     textAlign: "center",
     marginTop: 20,
     marginBottom: 40

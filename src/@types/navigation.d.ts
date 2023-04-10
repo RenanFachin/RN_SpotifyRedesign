@@ -5,6 +5,7 @@ export declare global {
       logon: undefined;
       signIn: undefined;
       register: undefined;
+      nowPlaying: undefined
     }
   }
 }

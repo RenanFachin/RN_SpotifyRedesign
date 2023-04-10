@@ -49,6 +49,10 @@ export function SignIn() {
     navigation.goBack()
   }
 
+  function handleMusicPage(){
+    navigation.navigate('nowPlaying')
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -118,6 +122,7 @@ export function SignIn() {
 
       <Button
         title="Sign in"
+        onPress={handleMusicPage}
       />
 
       <View style={{ gap: 40 }}>

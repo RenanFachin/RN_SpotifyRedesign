@@ -1,25 +1,24 @@
-// React native componentes
 import { TouchableOpacity, View, Text, TextInput } from "react-native";
-import { useState } from "react";
-// Estilização
+
 import { styles } from "./styles";
-import { THEME } from "../../theme";
-// Libs
 import { EyeSlash, Eye, CaretLeft } from "phosphor-react-native"
+import { THEME } from "../../theme";
 // Outros
 import SpotifyLogo from "../../assets/Logo.svg"
-// Components
+import { useState } from "react";
 import { Button } from "../../components/Button";
 import { Separator } from "../../components/Separator";
-import { SocialButtons } from "../../components/SocialButtons";
+import { SocialButtons } from '../../components/SocialButtons'
 
-export function SignIn() {
+export function Register() {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
-  const [password, setPassword] = useState("")
   const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const [isUsernameFocused, setIsUsernameFocused] = useState(false);
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
 
   function showPassword() {
     setIsPasswordHidden(!isPasswordHidden)
@@ -33,6 +32,14 @@ export function SignIn() {
     setIsUsernameFocused(false);
   }
 
+  function handleEmailFocus() {
+    setIsEmailFocused(true);
+  }
+
+  function handleEmailBlur() {
+    setIsEmailFocused(false);
+  }
+
   function handlePasswordFocus() {
     setIsPasswordFocused(true);
   }
@@ -40,6 +47,7 @@ export function SignIn() {
   function handlePasswordBlur() {
     setIsPasswordFocused(false);
   }
+
 
   return (
     <View style={styles.container}>
@@ -55,9 +63,8 @@ export function SignIn() {
 
       </View>
 
-
       <View style={styles.content}>
-        <Text style={styles.title}>Sign in</Text>
+        <Text style={styles.title}>Register</Text>
         <Text style={styles.subTitle}>If you need any support click here</Text>
       </View>
 
@@ -66,7 +73,7 @@ export function SignIn() {
         <View style={[styles.inputContent, isUsernameFocused && styles.inputContentFocused]}>
           <TextInput
             selectionColor={THEME.COLORS.GREEN_TEXT}
-            placeholder="Enter username or e-mail"
+            placeholder="Full name"
             placeholderTextColor={THEME.COLORS.GRAY[700]}
 
             style={styles.input}
@@ -75,6 +82,21 @@ export function SignIn() {
             onBlur={handleUsernameBlur}
             onChangeText={setUsername}
             value={username}
+          />
+        </View>
+
+        <View style={[styles.inputContent, isEmailFocused && styles.inputContentFocused]}>
+          <TextInput
+            selectionColor={THEME.COLORS.GREEN_TEXT}
+            placeholder="Enter e-mail"
+            placeholderTextColor={THEME.COLORS.GRAY[700]}
+
+            style={styles.input}
+
+            onFocus={handleEmailFocus}
+            onBlur={handleEmailBlur}
+            onChangeText={setEmail}
+            value={email}
           />
         </View>
 
@@ -103,13 +125,10 @@ export function SignIn() {
 
           </TouchableOpacity>
         </View>
-
-        <Text style={styles.recovery}>Recovery password</Text>
-
       </View>
 
       <Button
-        title="Sign in"
+        title="Create Account"
       />
 
       <View style={{ gap: 40 }}>
@@ -117,7 +136,7 @@ export function SignIn() {
         <SocialButtons />
 
         <Text style={styles.footerText}>
-          Not a member? register now
+          Do you have an account? Sign in
         </Text>
       </View>
     </View>

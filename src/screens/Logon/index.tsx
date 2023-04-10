@@ -1,17 +1,17 @@
 // React native
-import { TouchableOpacity, View, Text, Image } from 'react-native';
-import { CaretLeft } from 'phosphor-react-native'
-import { Button } from '../../components/Button';
-
+import { TouchableOpacity, View, Text, Image } from "react-native";
+// Componentes
+import { Button } from "../../components/Button";
+// Outros
+import { CaretLeft } from "phosphor-react-native"
 // Styles
-import { styles } from './styles';
-import { THEME } from '../../theme';
-
+import { styles } from "./styles";
+import { THEME } from "../../theme";
 // Images
-import SpotifyLogo from '../../assets/Logo.svg'
-import LogoOnImage from '../../assets/logonImage.png'
-import DetailsTop from '../../assets/detailsTop.png'
-import DetailsBottom from '../../assets/detailsBottom.png'
+import SpotifyLogo from "../../assets/Logo.svg"
+import LogoOnImage from "../../assets/logonImage.png"
+import DetailsTop from "../../assets/detailsTop.png"
+import DetailsBottom from "../../assets/detailsBottom.png"
 
 export function Logon() {
   return (
@@ -38,7 +38,7 @@ export function Logon() {
         <View style={styles.contentButtons}>
 
           <View style={styles.register}>
-            <Button title='Register' />
+            <Button title="Register" />
           </View>
 
           <TouchableOpacity style={styles.signIn} activeOpacity={0.6}>
@@ -48,9 +48,9 @@ export function Logon() {
         </View>
       </View>
 
-      <Image style={{position: 'absolute', top: 460}} source={LogoOnImage}/>
-      <Image style={{position: 'absolute', left: 270}} source={DetailsTop}/>
-      <Image style={{position: 'absolute', left: 280, bottom: -2}} source={DetailsBottom}/>
+      <Image style={{position: "absolute", top: 460}} source={LogoOnImage}/>
+      <Image style={{position: "absolute", left: 270}} source={DetailsTop}/>
+      <Image style={{position: "absolute", left: 280, bottom: -2}} source={DetailsBottom}/>
     </View>
   );
 }

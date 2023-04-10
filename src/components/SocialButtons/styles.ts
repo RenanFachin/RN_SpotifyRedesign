@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { THEME } from '../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
+    width: "100%",
+    flexDirection: "row",
     alignItems: "center",
-    backgroundColor: THEME.COLORS.BACKGROUND_900
+    justifyContent:"center",
+    gap: 60,
   }
 });

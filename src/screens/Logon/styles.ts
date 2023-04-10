@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { THEME } from '../../theme';
+import { StyleSheet } from "react-native";
+import { THEME } from "../../theme";
 
 
 export const styles = StyleSheet.create({
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
   },
   content: {
-    position: 'absolute',
+    position: "absolute",
     width: "100%",
     alignItems: "center",
     marginTop: 150,
@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     lineHeight: 35,
     fontFamily: THEME.FONT_FAMILY.BOLD,
     marginTop: 55,
-    textTransform: 'capitalize'
+    textTransform: "capitalize"
   },
   secondary: {
     color: THEME.COLORS.GRAY[650],
@@ -45,16 +45,16 @@ export const styles = StyleSheet.create({
   },
   contentButtons: {
     marginTop: 30,
-    width: '100%',
+    width: "100%",
     alignItems: "center",
     justifyContent: "space-around",
     flexDirection: "row"
   },
   register: {
-    width: '55%',
+    width: "55%",
   },
   signIn: {
-    width: '30%',
+    width: "30%",
     height: 92,
     alignItems: "flex-end",
     justifyContent: "center",

@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: THEME.COLORS.GREEN_BUTTON,
-    width: '100%',
+    width: "100%",
     height: 92,
     borderRadius: 30,
   },

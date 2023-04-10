@@ -1,13 +1,12 @@
 // Componentes React-native
-import { View, Image, Text } from 'react-native';
-
+import { View, Image, Text } from "react-native";
 // Estilizações
-import { styles } from './styles';
-
+import { styles } from "./styles";
 // Outros
-import background from '../../assets/bg-getStarted.png'
-import SpotifyLogo from '../../assets/Logo.svg'
-import { Button } from '../../components/Button';
+import background from "../../assets/bg-getStarted.png"
+import SpotifyLogo from "../../assets/Logo.svg"
+// Componentes
+import { Button } from "../../components/Button";
 
 export function GetStarted() {
   return (
@@ -34,7 +33,7 @@ export function GetStarted() {
         </Text>
 
         <Button
-          title='Get started'
+          title="Get started"
         />
 
       </View>

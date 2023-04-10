@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { THEME } from '../../theme';
+import { StyleSheet } from "react-native";
+import { THEME } from "../../theme";
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,10 +8,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   bgImage: {
-    position: 'absolute'
+    position: "absolute"
   },
   content: {
-    width: '100%',
+    width: "100%",
     marginTop: 400,
     alignItems: "center",
     paddingHorizontal: 50

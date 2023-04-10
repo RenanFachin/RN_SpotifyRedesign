@@ -1,7 +1,9 @@
 import { StatusBar } from 'react-native'
-import { GetStarted } from './src/screens/GetStarted';
 import { Loading } from './src/components/Loading';
+
+import { GetStarted } from './src/screens/GetStarted';
 import { Logon } from './src/screens/Logon'
+import { SignIn } from './src/screens/SignIn'
 
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
 
@@ -18,7 +20,7 @@ export default function App() {
         translucent
       />
 
-      {fontsLoaded ? <Logon /> : <Loading />}
+      {fontsLoaded ? <SignIn /> : <Loading />}
 
     </>
   );

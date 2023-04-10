@@ -8,7 +8,15 @@ import SpotifyLogo from "../../assets/Logo.svg"
 // Componentes
 import { Button } from "../../components/Button";
 
+import { useNavigation } from '@react-navigation/native'
+
 export function GetStarted() {
+  const navigation = useNavigation();
+
+  function handleGetStarted(){
+    navigation.navigate('logon')
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -34,6 +42,7 @@ export function GetStarted() {
 
         <Button
           title="Get started"
+          onPress={handleGetStarted}
         />
 
       </View>

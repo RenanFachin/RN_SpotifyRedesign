@@ -10,7 +10,11 @@ import { Button } from "../../components/Button";
 import { Separator } from "../../components/Separator";
 import { SocialButtons } from '../../components/SocialButtons'
 
+import { useNavigation } from "@react-navigation/native"
+
 export function Register() {
+  const navigation = useNavigation();
+
   const [isPasswordHidden, setIsPasswordHidden] = useState(true)
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
@@ -48,11 +52,14 @@ export function Register() {
     setIsPasswordFocused(false);
   }
 
+  function handleGoBack(){
+    navigation.goBack()
+  }
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.goBackButton} activeOpacity={0.6}>
+        <TouchableOpacity style={styles.goBackButton} activeOpacity={0.6} onPress={handleGoBack}>
           <CaretLeft size={24} color={THEME.COLORS.GRAY[400]} />
         </TouchableOpacity>
 
